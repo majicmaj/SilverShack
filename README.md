@@ -1,2 +1,0 @@
-# SilverShack
-Created with CodeSandbox

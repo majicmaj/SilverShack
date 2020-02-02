@@ -1,0 +1,30 @@
+.Listings {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Listings .About {
+  color: white;
+  margin-top: 80px;
+  width: 60%;
+  max-width: 500px;
+}
+
+.Listings .About h1 {
+}
+.listingsGrid {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 180px);
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .Listings {
+    grid-template-columns: 1fr 1fr;
+  }
+}

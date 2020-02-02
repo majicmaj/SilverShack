@@ -1,0 +1,93 @@
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  position: fixed;
+  z-index: 2;
+  color: rgb(185, 187, 190);
+}
+
+/* Nav Hamburger */
+.Nav .hamburger {
+}
+
+/* Nav Logo */
+.Nav .logo .link {
+  text-decoration: none;
+  color: inherit;
+}
+.Nav .logo p {
+  margin: 0;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.Nav .logo p:hover,
+.Nav .logo p:active,
+.Nav .logo p:focus {
+  color: #fff;
+  animation: textSpin 0.8s;
+}
+
+.Nav i:hover,
+.Nav i:active,
+.Nav i:focus {
+  color: #fff;
+}
+.Nav .right {
+  display: flex;
+}
+.Nav .cart {
+  /* position: fixed;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -12px;
+  text-align: center; */
+}
+/* Nav Search */
+.Nav .search {
+}
+
+.hide {
+  opacity: 0;
+  animation: hide 0.25s;
+}
+/* Animations */
+@keyframes textSpin {
+  0% {
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari 3-8 */
+    transform: rotate(0deg);
+  }
+  20% {
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari 3-8 */
+    transform: rotate(10deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Safari 3-8 */
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .Nav {
+    font-size: 30px;
+  }
+  .Nav .cart {
+    margin-left: -15px;
+  }
+}
