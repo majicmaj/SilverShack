@@ -1,18 +1,25 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router";
 import "./ListingDetailed.css";
+import { Link } from "react-router-dom";
 
 export default class ListingDetailed extends Component {
   constructor(props) {
     super();
-    this.state = { item: [] };
+    this.state = {};
   }
-  componentDidMount() {
+  static getDerivedStateFromProps(nextProps) {
+    let listingId = parseInt(nextProps.match.params.id);
+    return {
+      item: nextProps.listings.filter(item => item.id === listingId)
+    };
+  }
+  updateProps = () => {
     let listingId = parseInt(this.props.match.params.id);
-    let item = this.props.listings.filter(item => item.id === listingId);
+    let item = this.props.listings.filter(
+      item => parseInt(item.id) === listingId
+    );
     this.setState({ item: item });
-  }
-
+  };
   addToCart = id => {
     let input = document.getElementById("amount");
     let val;
@@ -52,7 +59,14 @@ export default class ListingDetailed extends Component {
         </div>
       );
     } else {
-      return <p>loading...</p>;
+      return (
+        <div className="loading">
+          <p className="text">loading...</p>
+          <Link to="/" className="link">
+            <p>Back to Listings</p>
+          </Link>
+        </div>
+      );
     }
   }
 }
