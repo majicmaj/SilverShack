@@ -13,6 +13,11 @@ export default class Cart extends Component {
     });
     return total;
   };
+
+  removeFromCart = (id, quan) => {
+    this.props.addToCart(id, -1 * quan);
+  };
+
   render() {
     if (Object.keys(this.props.cart).length) {
       console.log(this.props.cart);
@@ -43,7 +48,12 @@ export default class Cart extends Component {
                     ).toFixed(2)}
                   </p>
                 </div>
-                <div className="removeItem">
+                <div
+                  className="removeItem"
+                  onClick={() =>
+                    this.removeFromCart(listing.id, cartItem[1].quantity)
+                  }
+                >
                   <i className="fas fa-times" />
                 </div>
               </div>

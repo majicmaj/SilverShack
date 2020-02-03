@@ -46,8 +46,12 @@ export default class App extends Component {
       } else {
         cart[id] = { quantity: parseInt(amount) };
       }
+      if (cart[id].quantity <= 0) {
+        delete cart[id];
+      }
     });
     console.log(this.state.cart);
+    this.forceUpdate();
   };
   render() {
     return (

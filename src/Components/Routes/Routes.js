@@ -18,7 +18,11 @@ export default class Routes extends Component {
           exact
           path="/cart"
           render={() => (
-            <Cart listings={this.props.listings} cart={this.props.cart} />
+            <Cart
+              listings={this.props.listings}
+              cart={this.props.cart}
+              addToCart={this.props.addToCart}
+            />
           )}
         />
         <Route exact path="/checkout" render={() => <div />} />
