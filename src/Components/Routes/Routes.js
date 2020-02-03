@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router";
 import Listings from "../Listings/Listings";
 import Cart from "../Cart/Cart";
 import ListingDetailed from "../ListingDetailed/ListingDetailed";
+import Success from "../Success/Success";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -20,9 +21,7 @@ export default class Routes extends Component {
             <Cart listings={this.props.listings} cart={this.props.cart} />
           )}
         />
-
         <Route exact path="/checkout" render={() => <div />} />
-
         <Route
           exact
           path="/"
@@ -41,6 +40,14 @@ export default class Routes extends Component {
             />
           )}
         />
+        <Route
+          exact
+          path="/success/:id"
+          render={routeProps => (
+            <Success listings={this.props.listings} {...routeProps} />
+          )}
+        />
+        )}
       </Switch>
     );
   }

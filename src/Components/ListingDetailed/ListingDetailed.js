@@ -13,13 +13,6 @@ export default class ListingDetailed extends Component {
       item: nextProps.listings.filter(item => item.id === listingId)
     };
   }
-  updateProps = () => {
-    let listingId = parseInt(this.props.match.params.id);
-    let item = this.props.listings.filter(
-      item => parseInt(item.id) === listingId
-    );
-    this.setState({ item: item });
-  };
   addToCart = id => {
     let input = document.getElementById("amount");
     let val;
@@ -28,7 +21,7 @@ export default class ListingDetailed extends Component {
     } else val = input.value;
     this.props.addToCart(id, val);
     input.value = 0;
-    this.props.history.push("/");
+    this.props.history.push("/success/" + id);
   };
   render() {
     if (this.state.item[0]) {

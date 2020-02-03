@@ -43,6 +43,9 @@ export default class Cart extends Component {
                     ).toFixed(2)}
                   </p>
                 </div>
+                <div className="removeItem">
+                  <i className="fas fa-times" />
+                </div>
               </div>
             );
           })}
