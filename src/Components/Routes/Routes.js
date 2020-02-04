@@ -30,7 +30,11 @@ export default class Routes extends Component {
           exact
           path="/"
           render={() => (
-            <Listings about={this.props.about} listings={this.props.listings} />
+            <Listings
+              searchString={this.props.searchString}
+              listings={this.props.listings}
+              handleSearch={this.props.handleSearch}
+            />
           )}
         />
         <Route

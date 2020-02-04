@@ -8,7 +8,7 @@
 .Listings .About {
   color: white;
   margin-top: 80px;
-  width: 60%;
+  width: 80%;
   max-width: 500px;
 }
 
@@ -17,10 +17,56 @@
 .listingsGrid {
   width: 100%;
   max-width: 800px;
-  margin-top: 140px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   justify-content: center;
+}
+
+.Listings .search {
+  color: white;
+  background: #343638;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-bottom: 0;
+}
+
+.Listings .search .searchInput {
+  background: #343638;
+  border: none;
+  color: rgb(185, 187, 190);
+  min-width: 90%;
+  font-size: inherit;
+}
+
+.Listings .search i {
+  width: 20px;
+}
+
+.Listings .search:hover,
+.Listings .search:focus {
+  animation: expand 0.5s forwards;
+}
+
+@keyframes expand {
+  0% {
+    padding: 10px;
+    width: 40%;
+    font-size: 16px;
+    max-width: 300px;
+  }
+  100% {
+    padding: 15px;
+    width: 80%;
+    font-size: 20px;
+    max-width: 400px;
+  }
 }
 
 @media only screen and (max-width: 600px) {

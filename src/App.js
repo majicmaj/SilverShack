@@ -13,8 +13,7 @@ export default class App extends Component {
     this.state = {
       listings: [],
       cart: {},
-      about:
-        "Based in United States, Silver Shack Coins offers a large collection of both high demand coins and bullion!"
+      searchString: ""
     };
   }
 
@@ -27,6 +26,9 @@ export default class App extends Component {
     window.addEventListener("scroll", e => this.handleNavigation(e));
   }
 
+  handleSearch = s => {
+    this.setState({ searchString: s });
+  };
   handleNavigation = e => {
     const window = e.currentTarget;
     const navbar = document.getElementById("Nav");
@@ -60,8 +62,9 @@ export default class App extends Component {
         <Routes
           listings={this.state.listings}
           cart={this.state.cart}
-          about={this.state.about}
           addToCart={this.addToCart}
+          searchString={this.state.searchString}
+          handleSearch={this.handleSearch}
         />
       </div>
     );
