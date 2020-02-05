@@ -31,7 +31,7 @@ export default class Listings extends Component {
             <input
               className="searchInput"
               type="text"
-              value={search}
+              value={this.props.searchString}
               onChange={this.handleSearch}
               ref="search"
             />

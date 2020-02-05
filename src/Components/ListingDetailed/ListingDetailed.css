@@ -3,7 +3,7 @@ body {
 }
 .ListingDetailed {
   width: 100%;
-  min-height: 100vh;
+  min-height: 101vh;
   height: 100%;
   background-image: linear-gradient(#323438, #424448, #323438);
 }
