@@ -26,7 +26,10 @@ export default class Listings extends Component {
       }
       return (
         <div className="Listings">
-          <About about="Based in the United States, Silver Shack Coins offers a large collection of high demand coins and bullion from commons to rares!" />
+          <About
+            about="Based in the United States, Silver Shack Coins offers a large selection
+           of high quality bullion and rare coinage at an fair, affordable price."
+          />
           <div className="search">
             <input
               className="searchInput"

@@ -13,7 +13,7 @@ export default class Nav extends Component {
         {/* Middle SS Logo */}
         <div className="logo">
           <Link className="link" to="/">
-            <p>SS</p>
+            <i className="fas fa-coins" />
           </Link>
         </div>
         {/* Search */}

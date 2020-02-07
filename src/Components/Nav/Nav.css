@@ -26,9 +26,9 @@
   letter-spacing: -0.05em;
 }
 
-.Nav .logo p:hover,
-.Nav .logo p:active,
-.Nav .logo p:focus {
+.Nav .logo i:hover,
+.Nav .logo i:active,
+.Nav .logo i:focus {
   color: #fff;
   animation: textSpin 0.8s;
 }
