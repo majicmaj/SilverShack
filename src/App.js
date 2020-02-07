@@ -14,7 +14,7 @@ export default class App extends Component {
       listings: [],
       cart: {},
       about:
-        "Based in United States, Silver Shack Coins offers a large collection of both high demand coins and bullion!"
+        "Based in the United States, Silver Shack Coins offers a large collection of high demand coins and bullion from commons to rares!"
     };
   }
 
