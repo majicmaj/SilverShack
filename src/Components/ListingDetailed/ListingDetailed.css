@@ -20,6 +20,13 @@ body {
   max-height: 400px;
   object-fit: contain;
 }
+.tilt {
+  width: 70vw;
+  max-width: 400px;
+  height: 70vw;
+  max-height: 400px;
+  margin: 0 auto;
+}
 .ListingDetailed .container p {
   color: #fff;
   letter-spacing: 0.1em;

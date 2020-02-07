@@ -54,6 +54,24 @@
   animation: expand 0.5s forwards;
 }
 
+.Listings .link img {
+  animation: appear 1s forwards;
+}
+
+.Listings .filter {
+  color: rgb(185, 187, 190);
+  background: #343638;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  position: fixed;
+  left: 10px;
+  font-size: 20px;
+}
+
+.Listings .filter:hover {
+  color: white;
+}
 @keyframes expand {
   0% {
     padding: 10px;
@@ -66,6 +84,15 @@
     width: 80%;
     font-size: 20px;
     max-width: 400px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

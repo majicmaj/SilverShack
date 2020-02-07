@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./ListingDetailed.css";
 import { Link } from "react-router-dom";
+import Tilt from "react-tilt";
 
 export default class ListingDetailed extends Component {
   constructor(props) {
@@ -29,7 +30,9 @@ export default class ListingDetailed extends Component {
       return (
         <div className="ListingDetailed">
           <div className="container">
-            <img src={listing.img} />
+            <Tilt className="Tilt tilt" options={{ max: 50, perspective: 500 }}>
+              <img src={listing.img} />
+            </Tilt>
             <p className="title">{listing.title}</p>
             <p className="year">{listing.blurb}</p>
             <p> Choose how many </p>

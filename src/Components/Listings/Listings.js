@@ -26,7 +26,7 @@ export default class Listings extends Component {
       }
       return (
         <div className="Listings">
-          <About about="Based in United States, Silver Shack Coins offers a large collection of both high demand coins and bullion!" />
+          <About about="Based in the United States, Silver Shack Coins offers a large collection of high demand coins and bullion from commons to rares!" />
           <div className="search">
             <input
               className="searchInput"
@@ -40,9 +40,12 @@ export default class Listings extends Component {
           <div className="listingsGrid">
             {_listings.map(item => (
               <Link className="link" key={item.id} to={"/listings/" + item.id}>
-                <Listing listing={item} />
+                <Listing className="listing" listing={item} />
               </Link>
             ))}
+          </div>
+          <div className="filter">
+            <i className="fas fa-filter" />
           </div>
         </div>
       );
